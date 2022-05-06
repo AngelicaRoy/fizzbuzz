@@ -1,8 +1,7 @@
 //Read json file ===========================
-const Reader=require("./../fizzbuz/lib/utils/Reader")
+const Reader=require("./lib/utils/Reader")
+const ExplorersService=require("./lib/services/explorerService")
 const explorers=Reader.readJsonFile("explorers.json")
-
-// Aplicación del ExplorerService sobre la lista de explorers
-ExplorerService.filterByMission(explorers, "node");
-ExplorerService.getAmountOfExplorersByMission(explorers, "node");
-ExplorerService.getExplorersUsernamesByMission(explorers, "node");
+//console.log(explorers)
+// Return list of explorers that are in Node
+console.log(ExplorerService.filterByMission(explorers, "node"));
